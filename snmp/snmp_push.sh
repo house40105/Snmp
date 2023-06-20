@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 使用 SNMP 命令從 Linux 主機收集 CPU 使用率
-cpu_usage=$(snmpwalk -v2c -c private 127.0.0.1 .1.3.6.1.4.1.2021.10.1.3.1)
+cpu_usage=$(snmpwalk -v2c -c private 127.0.0.1 ssCpuUser | awk -F' ' '{print $4}')
 
 # 使用 SNMP 命令從 Linux 主機收集記憶體使用率
 mem_usage=$(snmpwalk -v2c -c private 127.0.0.1 memAvailReal| awk -F' ' '{print $4}')
