@@ -1,4 +1,4 @@
-# Snmp  
+# PRTG sensors with Snmp  
 To set up monitoring using the PRTG platform, please follow the steps below:  
 
 1. **Learn about PRTG monitoring platform:** Visit https://www.paessler.com/prtg to familiarize yourself with the PRTG monitoring platform and its features.
