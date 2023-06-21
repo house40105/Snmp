@@ -6,7 +6,7 @@ my $mem_usage = `snmpwalk -v2c -c acom_snmp localhost memAvailReal | awk -F' ' '
 my $total_mem = `snmpwalk -v2c -c acom_snmp localhost memTotalReal | awk -F' ' '{print \$4}'`;
 my $mem_usage_percentage = sprintf("%.2f", (($total_mem - $mem_usage) / $total_mem)*100);
 
-my $response = '<html><body>['.$cpu_usage.']['.$mem_usage_percentage.']</html></body>';
+my $response = '<html><body>['.$cpu_usage.']['.$mem_usage_percentage.']</body></html>';
 
  open(my $fh,">/var/www/html/index.html");
  print $fh "$response";
